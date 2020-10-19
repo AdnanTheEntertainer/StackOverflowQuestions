@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cs_0_5_dp">0.5dp</dimen>
+    <dimen name="cs_1_dp">1dp</dimen>
+    <dimen name="cs_2_dp">2dp</dimen>
+    <dimen name="cs_5_dp">5dp</dimen>
+    <dimen name="cs_8_dp">8dp</dimen>
+    <dimen name="cs_10_dp">10dp</dimen>
+    <dimen name="cs_15_dp">15dp</dimen>
+    <dimen name="cs_16_dp">16dp</dimen>
+    <dimen name="cs_30_dp">30dp</dimen>
+    <dimen name="cs_50_dp">50dp</dimen>
+
+    <dimen name="cs_5_sp">5sp</dimen>
+    <dimen name="cs_17_sp">17sp</dimen>
+
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="score_lable">Score</string>
+    <string name="tag_lable">Tag</string>
+    <string name="default_score">5</string>
+    <string name="default_tag">android</string>
+    <string name="submit_button_text">Get question</string>
+    <string name="try_again">Try again</string>
+    <string name="not_item_found">No question found, \nPlease change your search criteria</string>
+    <string name="network_error">Couldn\'t load</string>
+    <string name="score_text_pattern">Score : %1$d</string>
+
+</resources>

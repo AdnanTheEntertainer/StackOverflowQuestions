@@ -1,0 +1,3 @@
+include ':stackoverflow-queries'
+include ':app'
+rootProject.name = "CallSignTask"

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CallSignTask</string>
+    <string name="start_sdk_text">Start Sdk</string>
+</resources>
