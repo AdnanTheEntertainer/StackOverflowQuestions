@@ -4,7 +4,7 @@ package com.callsigntask.queries.data.network
  * A generic class that holds a value with its loading status.
  * @param <T>
  */
-sealed class ResponseState<out T : Any?> {
+sealed class ResponseState<in T> {
 
     data class  Loading (val loading: Boolean): ResponseState<Nothing>()
     data class Success<T>(val data: T) : ResponseState<T>()

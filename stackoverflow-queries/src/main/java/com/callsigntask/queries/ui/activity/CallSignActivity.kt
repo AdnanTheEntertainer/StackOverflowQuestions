@@ -1,23 +1,27 @@
 package com.callsigntask.queries.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.callsigntask.queries.R
+import com.callsigntask.queries.databinding.ActivityCallSignBinding
+import com.callsigntask.queries.ui.base.DatabindingActivity
 import com.callsigntask.queries.ui.fragment.InputFormFragment
 import com.callsigntask.queries.utils.FragmentUtils
 
-class CallSignActivity : AppCompatActivity() {
+class CallSignActivity : DatabindingActivity() {
 
+//    private val binding: ActivityCallSignBinding by binding(R.layout.activity_call_sign)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call_sign)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    if(supportFragmentManager.fragments.size == 0) {
         FragmentUtils.addFragment(
             this,
             InputFormFragment.newInstance(),
             R.id.container
         )
+    }
     }
 
     override fun onBackPressed() {

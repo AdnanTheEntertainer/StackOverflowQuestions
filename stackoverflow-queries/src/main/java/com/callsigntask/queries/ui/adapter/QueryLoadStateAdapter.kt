@@ -2,13 +2,10 @@ package com.callsigntask.queries.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.callsigntask.queries.data.model.response.QueryViewItem
 import com.callsigntask.queries.databinding.ItemQueriesLoadStateFooterBinding
-import com.recipe.task.view.base.BaseViewHolder
 
 class QueryLoadStateAdapter(val retry: () -> Unit) : LoadStateAdapter<QueryLoadStateAdapter.QueryLoadStateViewHolder> (){
 

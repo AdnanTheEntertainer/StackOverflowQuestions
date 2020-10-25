@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <application  android:theme="@style/Theme.AppCompat"
-        android:name=".QueryApplication">
+        android:name="com.callsigntask.queries.QueryApplication">
         <activity android:name="com.callsigntask.queries.ui.activity.CallSignActivity" />
     </application>
 

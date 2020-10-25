@@ -2,7 +2,6 @@ package com.callsigntask.queries.data.repository
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import androidx.paging.PagingSource
 import androidx.paging.liveData
 import com.callsigntask.queries.data.QueryPageDataSource
 import com.callsigntask.queries.data.network.QueriesApiClient

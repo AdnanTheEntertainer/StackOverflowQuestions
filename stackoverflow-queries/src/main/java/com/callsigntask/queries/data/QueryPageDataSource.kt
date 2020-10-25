@@ -1,9 +1,7 @@
 package com.callsigntask.queries.data
 
-import androidx.paging.DataSource
 import androidx.paging.PagingSource
 import com.callsigntask.queries.data.model.response.QueryItem
-import com.callsigntask.queries.data.network.QueriesApiClient
 import com.callsigntask.queries.data.network.QueriesService
 import retrofit2.HttpException
 import java.io.IOException

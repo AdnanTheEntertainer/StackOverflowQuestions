@@ -2,19 +2,13 @@ package com.callsigntask.queries.ui.fragment
 
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
-import androidx.core.view.doOnNextLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,10 +20,6 @@ import com.callsigntask.queries.ui.adapter.QueriesAdapter
 import com.callsigntask.queries.viewmodel.QueriesViewModel
 import com.callsigntask.utils.EspressoIdlingResource
 import com.recipe.task.interactor.QueryItemClickListener
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class QueriesListFragment : Fragment(), QueryItemClickListener, View.OnClickListener {
 

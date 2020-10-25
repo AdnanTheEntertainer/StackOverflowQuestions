@@ -1,9 +1,10 @@
-package com.callsigntask
+package com.callsigntask.queries
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.callsigntask.R
 import com.callsigntask.queries.ui.activity.CallSignActivity
 
 class MainActivity : AppCompatActivity() {

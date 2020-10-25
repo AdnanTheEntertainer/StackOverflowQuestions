@@ -32,10 +32,15 @@ class InputFormFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupUI()
+        setupUI(savedInstanceState)
     }
 
-    private fun setupUI() {
+    private fun setupUI(savedInstanceState: Bundle?) {
+        savedInstanceState?.let {
+            binding?.etScore?.setText(it.getString("score"))
+            binding?.etTag?.setText(it.getString("tag"))
+        }
+
         binding?.btSubmit?.setOnClickListener {
             submitQueriesRequest()
         }
@@ -50,6 +55,12 @@ class InputFormFragment : Fragment() {
         )
 //        startActivity(Intent(context, TestActivity::class.java))
         FragmentUtils.addFragmentWithStack(activity, fragment, R.id.container)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("score", binding?.etScore?.text?.toString())
+        outState.putString("tag", binding?.etTag?.text?.toString())
     }
 
 }

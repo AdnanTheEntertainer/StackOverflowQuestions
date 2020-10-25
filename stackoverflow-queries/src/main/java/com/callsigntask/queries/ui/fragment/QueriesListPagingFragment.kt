@@ -3,6 +3,7 @@ package com.callsigntask.queries.ui.fragment
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -38,10 +39,19 @@ class QueriesListPagingFragment : Fragment(R.layout.fragment_queries_list), Quer
         }
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        savedInstanceState?.let {
+            Toast.makeText(context, "Tag: ${it.getString("tag")} Score: ${it.getInt("score")}", Toast.LENGTH_SHORT).show()
+        }
+    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentQueriesListBinding.bind(view)
         setupUI()
+        if(savedInstanceState == null){
+            // Api call
+            queryViewModel.getPagingList(hashMapOf("score" to queryScore.toString(), "tag" to queryTag))        }
     }
 
     private fun setupUI() {
@@ -78,9 +88,6 @@ class QueriesListPagingFragment : Fragment(R.layout.fragment_queries_list), Quer
         }
         // Only Debug variant. Espresso waiting lock this should be only inside dev build type
 //        EspressoIdlingResource.increment()
-
-        // Api call
-        queryViewModel.getQueriesPaging(score = queryScore, tag = queryTag)
     }
 
     private fun registerApiCallback() {
@@ -124,8 +131,16 @@ class QueriesListPagingFragment : Fragment(R.layout.fragment_queries_list), Quer
         queryAdapter?.refresh()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("score", queryScore)
+        outState.putString("tag", queryTag)
+    }
+
+
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+//        _binding = null
+        binding.rvQuery.adapter = null
     }
 }
