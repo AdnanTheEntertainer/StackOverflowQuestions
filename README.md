@@ -8,3 +8,4 @@ Build instruction
 
 Component used:
 - Android Architecture component
+- Unit testing
