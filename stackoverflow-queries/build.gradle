@@ -100,5 +100,5 @@ dependencies {
     androidTestImplementation "androidx.fragment:fragment-testing:$fragment_test"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_core"
-    debugImplementation "androidx.test.espresso:espresso-idling-resource:$espresso_core"
+    implementation "androidx.test.espresso:espresso-idling-resource:$espresso_core"
 }
